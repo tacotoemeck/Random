@@ -45,7 +45,6 @@
 
                 if (elevator.destinationQueue.length >= 1 && floorNum >= lowestRequestedFloor) {
                     var sortedQueue = elevator.destinationQueue.sort((a, b) => b - a);
-                    console.log('going down', sortedQueue)
                     for ( var i = 0; i < elevator.destinationQueue.length; i++) {
                         if (elevator.destinationQueue[i] < elevator.currentFloor()) {
                             elevator.goToFloor(elevator.destinationQueue[i]);
